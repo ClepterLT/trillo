@@ -14,20 +14,118 @@
         <div class="overall-container">
             <header class="header">
                 <img src="img/logo.png" alt="Trillo Logo" class="logo">
+
                 <form action="#" class="searchbar">
                     <input type="text" class="searchbar__input" placeholder="Search hotels">
-                    <button class="searchbar_button">
-                        
+                    <button class="searchbar__button">
+                        <svg class="searchbar__icon">
+                            <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+                        </svg>
                     </button>
                 </form>
-                <div class="user-navigation"></div>
-            </header>
-            <div class="content-container">
-                <nav class="sidebar-navigation">
-                    Sidebar Navigation
+
+                <nav class="user-navigation">
+                    <div class="user-navigation__icon-box">
+                        <svg class="user-navigation__icon">
+                            <use xlink:href="img/sprite.svg#icon-bookmark"></use>
+                        </svg>
+                        <span class="user-navigation__user-notification">7</span>
+                    </div>
+                    <div class="user-navigation__icon-box">
+                        <svg class="user-navigation__icon">
+                            <use xlink:href="img/sprite.svg#icon-chat"></use>
+                        </svg>
+                        <span class="user-navigation__user-notification">13</span>
+                    </div>
+                    <div class="user-navigation__user-info">
+                        <img src="img/user.jpg" alt="Your Photo" class="user-navigation__user-photo">
+                        <span class="user-navigation__user-name">Petras</span>
+                    </div>
                 </nav>
-                <main class="hotel-overview">
-                    Hotel Overview
+            </header>
+
+            <div class="content">
+                <nav class="sidebar-container">
+                    <ul class="sidebar-navigation">
+                        <li class="sidebar-navigation__item sidebar-navigation__item--active">
+                            <a href="#" class="sidebar-navigation__link">
+                                <svg class="sidebar-navigation__icon">
+                                    <use xlink:href="img/sprite.svg#icon-home"></use>
+                                </svg>
+                                <span>Hotel</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-navigation__item">
+                            <a href="#" class="sidebar-navigation__link">
+                                <svg class="sidebar-navigation__icon">
+                                    <use xlink:href="img/sprite.svg#icon-aircraft-take-off"></use>
+                                </svg>
+                                <span>Flight</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-navigation__item">
+                            <a href="#" class="sidebar-navigation__link">
+                                <svg class="sidebar-navigation__icon">
+                                    <use xlink:href="img/sprite.svg#icon-key"></use>
+                                </svg>
+                                <span>Car Rental</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-navigation__item">
+                            <a href="#" class="sidebar-navigation__link">
+                                <svg class="sidebar-navigation__icon">
+                                    <use xlink:href="img/sprite.svg#icon-map"></use>
+                                </svg>
+                                <span>Tours</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="sidebar-copyright">&copy 2021 by Petras Petkevicius.<br> All rights reserved</div>
+                </nav>
+
+                <main class="content-container">
+                    <div class="gallery">
+                        <figure class="gallery__item">
+                            <img src="img/hotel-1.jpg" alt="Photo of Hotel 1" class="gallery__photo">
+                        </figure>
+                        <figure class="gallery__item">
+                            <img src="img/hotel-2.jpg" alt="Photo of Hotel 2" class="gallery__photo">
+                        </figure>
+                        <figure class="gallery__item">
+                            <img src="img/hotel-3.jpg" alt="Photo of Hotel 3" class="gallery__photo">
+                        </figure>
+                    </div>
+
+                    <div class="hotel-overview">
+                        <h1 class="hotel-overview__heading">Hotel Las Palmas</h1>
+                        <div class="hotel-overview__rating">
+                            <svg class="hotel-overview__icon">
+                                <use xlink:href="img/sprite.svg#icon-star"></use>
+                            </svg>
+                            <svg class="hotel-overview__icon">
+                                <use xlink:href="img/sprite.svg#icon-star"></use>
+                            </svg>
+                            <svg class="hotel-overview__icon">
+                                <use xlink:href="img/sprite.svg#icon-star"></use>
+                            </svg>
+                            <svg class="hotel-overview__icon">
+                                <use xlink:href="img/sprite.svg#icon-star"></use>
+                            </svg>
+                            <svg class="hotel-overview__icon">
+                                <use xlink:href="img/sprite.svg#icon-star"></use>
+                            </svg>
+                        </div>
+                        <div class="hotel-overview__location">
+                            <svg class="hotel-overview__icon">
+                                <use xlink:href="img/sprite.svg#icon-location-pin"></use>
+                            </svg>
+                            <button class="btn-inline">Albufeira, Portugal</button>
+                        </div>
+                        <div class="hotel-overview__rating">
+                            <div class="hotel-overview__rating-average">8.6</div>
+                            <div class="hotel_overview__rating-count">426 votes</div>
+                        </div>
+                    </div>
                 </main>
             </div>
         </div>

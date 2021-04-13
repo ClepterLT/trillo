@@ -35,6 +35,144 @@ body {
   background-repeat: no-repeat;
   min-height: 100vh; }
 
+.logo {
+  height: 4rem;
+  margin-left: 3rem; }
+
+.searchbar {
+  flex: 0 0 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .searchbar__input {
+    font-size: 1.7rem;
+    font-family: inherit;
+    color: var(--color-grey-dark-3);
+    font-weight: 100;
+    background-color: var(--color-grey-light-2);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 100px;
+    width: 90%;
+    transition: all .3s;
+    margin-right: -3.25rem; }
+    .searchbar__input:focus {
+      outline: none;
+      width: 100%;
+      background-color: var(--color-grey-light-3); }
+  .searchbar__input:focus + .searchbar__button {
+    background-color: var(--color-grey-light-3); }
+  .searchbar__button {
+    border: none;
+    background-color: var(--color-grey-light-2); }
+    .searchbar__button:focus {
+      outline: none; }
+    .searchbar__button:active {
+      transform: translateY(2px); }
+  .searchbar__icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    fill: var(--color-grey-dark-3); }
+
+.user-navigation {
+  align-self: stretch;
+  display: flex;
+  align-items: center; }
+  .user-navigation > * {
+    height: 100%;
+    padding: 0 2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center; }
+  .user-navigation > *:hover {
+    background-color: var(--color-grey-light-3); }
+  .user-navigation__icon-box {
+    position: relative; }
+  .user-navigation__icon {
+    height: 3rem;
+    width: 3rem;
+    fill: var(--color-grey-dark-3); }
+  .user-navigation__user-notification {
+    height: 2rem;
+    width: 2rem;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    padding: 1.5px;
+    position: absolute;
+    right: 1rem;
+    top: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .user-navigation__user-info {
+    font-size: 1.5rem; }
+  .user-navigation__user-photo {
+    height: 4rem;
+    border-radius: 50%; }
+  .user-navigation__user-name {
+    margin-left: 1.1rem; }
+
+.sidebar-navigation {
+  margin-top: 3rem;
+  list-style: none;
+  font-size: 1.75rem;
+  font-weight: 100;
+  text-transform: uppercase; }
+  .sidebar-navigation__item {
+    position: relative; }
+    .sidebar-navigation__item:not(:last-child) {
+      margin-bottom: .5rem; }
+  .sidebar-navigation__item:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--color-primary);
+    height: 100%;
+    width: 3px;
+    transform: scaleY(0);
+    transition: transform 0.2s, width 0.4s cubic-bezier(1, 0.01, 0, 1.01) 0.2s; }
+  .sidebar-navigation__item:hover::before, .sidebar-navigation__item--active::before {
+    transform: scaleY(1);
+    width: 100%; }
+  .sidebar-navigation__item:active::before {
+    background-color: var(--color-primary-light); }
+  .sidebar-navigation__link:link, .sidebar-navigation__link:visited {
+    text-decoration: none;
+    color: var(--color-grey-light-2);
+    display: block;
+    padding: .75rem 0 .75rem 1.5rem;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center; }
+  .sidebar-navigation__icon {
+    height: 2rem;
+    width: 2rem;
+    fill: currentColor;
+    margin-right: 1.5rem; }
+
+.sidebar-copyright {
+  font-size: 1.2rem;
+  color: var(--color-grey-dark-3);
+  text-align: center;
+  padding: 2rem; }
+
+.gallery {
+  display: flex; }
+  .gallery__photo {
+    width: 100%;
+    display: block; }
+
+.hotel-overview {
+  display: flex; }
+  .hotel-overview__icon {
+    height: 2rem;
+    width: 2rem;
+    fill: var(--color-primary);
+    margin-right: 1.5rem; }
+
 .overall-container {
   max-width: 120rem;
   margin: 0 auto;
@@ -42,17 +180,24 @@ body {
   background-color: var(--color-grey-light-1); }
 
 .header {
-  height: 7rem;
+  height: 8rem;
   background-color: var(--color-white);
-  border-bottom: 1px solid var(--color-grey-light-2); }
+  border-bottom: 1px solid var(--color-grey-light-2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
 
-.content-container {
+.content {
   display: flex; }
 
-.sidebar-navigation {
+.sidebar-container {
   flex: 0 0 18%;
-  background-color: var(--color-grey-dark-1); }
+  background-color: var(--color-grey-dark-1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
 
-.hotel-overview {
+.content-container {
   flex: 1;
-  background-color: var(--color-white); }
+  background-color: var(--color-white);
+  height: 500px; }
