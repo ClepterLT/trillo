@@ -3,6 +3,11 @@
     margin: 0 auto;
     box-shadow: var(--shadow-dark);
     background-color: var(--color-grey-light-1);
+
+    @media only screen and (max-width: $bp-large) {
+        max-width: 100%;
+        width: 100%;
+    }
 }
 
 .header {
@@ -17,6 +22,10 @@
 
 .content {
     display: flex;
+
+    @media only screen and (max-width: $bp_medium) {
+        flex-direction: column;
+    }
 }
 
 .sidebar-container {
@@ -38,6 +47,10 @@
     padding: 4.5rem;
     background-color: var(--color-grey-light-1);
     border-bottom: var(--line);
+
+    @media only screen and (max-width: $bp_medium) {
+        padding: 2.5rem;
+    }
 }
 
 .hotel-description {
@@ -47,6 +60,11 @@
     margin-right: 4.5rem;
     font-size: 1.4rem;
     padding: 3rem;
+
+    @media only screen and (max-width: $bp_medium) {
+        margin-right: 2.5rem;
+        padding: 2rem;
+    }
 }
 
 .user-reviews {
