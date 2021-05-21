@@ -22,9 +22,10 @@
 
 }
 
-$bp-largest: 75em; // 1200px
-$bp-large: 70em; // 1120px
-$bp-medium: 56.625em; // 906px
+$bp-largest: 75em;      // 1200px
+$bp-large: 70em;        // 1120px
+$bp-medium: 56.25em;    // 900px
+$bp-small: 37.5em;      // 600px
 
 * {
     margin: 0;

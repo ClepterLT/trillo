@@ -18,6 +18,11 @@
     justify-content: center;
     align-items: center;
 
+    @media only screen and (max-width: $bp-small) {
+        order: 1;
+        flex: 0 0 100%;
+    }
+
     &__input {
         font-size: 1.7rem;
         font-family: inherit;
@@ -139,6 +144,7 @@
     @media only screen and (max-width: $bp_medium) {
         display: flex;
         margin: 0;
+        font-size: 1.5rem;
     }
 
     &__item {
@@ -184,7 +190,6 @@
     &__link:visited {
         text-decoration: none;
         color: var(--color-grey-light-2);
-        display: block;
         padding: .75rem 0 .75rem 1.5rem;
         position: relative;
         z-index: 1;
@@ -196,6 +201,11 @@
             justify-content: center;
             padding: 2rem;
         }
+
+        @media only screen and (max-width: $bp-small) {
+            flex-direction: column;
+            padding: 1rem;
+        }
     }
 
     &__icon {
@@ -203,6 +213,13 @@
         width: 2rem;
         fill: currentColor;
         margin-right: 1.5rem;
+
+        @media only screen and (max-width: $bp-small) {
+            margin-right: 0;
+            margin-bottom: .3rem;
+            height: 1.5rem;
+            width: 1.5rem;
+        }
     }
 }
 
@@ -246,6 +263,10 @@
         text-transform: uppercase;
         letter-spacing: 1.2px;
         margin: 1rem 2rem 1rem 2rem;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 2rem;
+        }
     }
 
     &__stars {
@@ -258,6 +279,11 @@
         height: 2.5rem;
         width: 2.5rem;
         fill: var(--color-primary);
+
+        @media only screen and (max-width: $bp-small) {
+            height: 2rem;
+            width: 2rem;
+        }
     }
 
     &__location {
@@ -286,6 +312,10 @@
         font-size: 2.25rem;
         font-weight: 300;
         margin-bottom: -.6rem;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 2rem;
+        }
     }
 
     &__rating-count {
@@ -428,15 +458,18 @@
         margin-right: .7rem;
 
         // Older browsers
-        // background-image: url(../img/chevron-thin-right.svg);
-        // background-size: cover;
+        background-image: url(../img/chevron-thin-right.svg);
+        background-size: cover;
 
-        // Newer broesers
-        background-color: var(--color-primary);
-        -webkit-mask-image: url(../img/chevron-thin-right.svg);
-        -webkit-mask-size: cover;
-        mask-image: url(../img/chevron-thin-right.svg);
-        mask-size: cover;
+        // Newer browsers
+        @supports (-webkit-mask-image: url(../img/chevron-thin-right.svg)) or (mask-image: url(../img/chevron-thin-right.svg)) {
+            background-color: var(--color-primary);
+            -webkit-mask-image: url(../img/chevron-thin-right.svg);
+            -webkit-mask-size: cover;
+            mask-image: url(../img/chevron-thin-right.svg);
+            mask-size: cover;
+            background-image: none;
+        }
     }
 }
 
@@ -453,6 +486,10 @@
 
     &__counts {
         margin-right: auto;
+    }
+
+    &__friends {
+        display: flex;
     }
 
     &__photo {
